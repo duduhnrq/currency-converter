@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --color001: #42833c; 
+    --color002: #fff;
+    --color003: #1a1a1a;
+    --color004: #d3d3d3;
+
+    --font001: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--color001);
+    font-family: var(--font001);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 300px;
+    height: auto;
+    background-color: var(--color002);
+    padding: 25px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+}
+
+.container h1 {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.amount-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.amount-group input {
+    border: 1px solid var(--color004);
+    border-radius: 5px;
+    padding: 10px;
+    transition: all .4s;
+    font-family: var(--font001);
+}
+
+.amount-group input:focus {
+    outline: none;
+    border: 1px solid var(--color003);
+}
+
+.currency-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.currency-group img {
+    width: 20px;
+    margin-top: 25px;
+}
+
+.currency-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.currency-item select {
+    padding: 10px;
+    border: 1px solid var(--color004);
+    border-radius: 5px;
+    transition: all .4s;
+}
+
+.currency-item select:focus {
+    border: 1px solid var(--color003);
+}
+
+#result {
+    display: flex;
+    width: 100%;
+    font: 400 1rem var(--font001);
+    padding: 10px;
+}
+
+#convert-btn {
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color001);
+    color: var(--color002);
+    font: 400 1rem var(--font001);
+    transition: all .4s;
+}
+
+#convert-btn:hover {
+    background-color: var(--color002);
+    color: var(--color001);
+    box-shadow: inset 0px 0px 0px 2px var(--color001);
+}
+
+footer {
+    color: var(--color002);
+    font: 400 1rem var(--font001);
+    padding: 10px;
+}
+
+footer a {
+    color: var(--color002);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
