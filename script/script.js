@@ -12,7 +12,7 @@ function convertCurrency() {
         return;
     }
     
-    fetch('https://api.exchangerate-api.com/v4/latest/USD?apikey=cf48e7061a1e747f37ac479cac4999f5')
+    fetch(`https://api.exchangerate-api.com/v4/latest/${fromCurrency}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
@@ -24,8 +24,15 @@ function convertCurrency() {
             if (!rate) {
                 resultText.textContent = 'Invalid currency selected.';
                 return;
-            } 
-            const convertedAmount = (inputNumber * rate).toFixed(2);
+            }
+
+            if (fromCurrency === toCurrency) {
+                resultText.textContent = `${inputNumber} ${fromCurrency} = ${inputNumber} ${toCurrency}`;
+                return;
+            }
+            
+            const exchangeRate = data.rates[toCurrency] / data.rates[fromCurrency];
+            const convertedAmount = (inputNumber * exchangeRate).toFixed(2);
             resultText.textContent = `${inputNumber} ${fromCurrency} = ${convertedAmount} ${toCurrency}`;
         })
         .catch(error => {
