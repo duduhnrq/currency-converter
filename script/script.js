@@ -43,7 +43,7 @@ function convertCurrency() {
 
 const convertBtn = document.getElementById('convert-btn');
 convertBtn.addEventListener('click', convertCurrency);
-convertBtn.addEventListener('keypress', function(event) {
+document.addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         convertCurrency();
     }
