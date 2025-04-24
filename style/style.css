@@ -77,15 +77,28 @@ body {
     flex-direction: column;
 }
 
-.currency-item select {
-    padding: 10px;
+.select-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid var(--color004);
     border-radius: 5px;
-    transition: all .4s;
+    padding: 10px;
 }
 
-.currency-item select:focus {
-    border: 1px solid var(--color003);
+.select-box img {
+    margin: 0;
+}
+
+.select-box select {
+    border: none;
+    border-radius: 5px;
+    transition: all .4s;
+    margin: 0 -5px 0 5px;
+}
+
+.select-box select:focus {
+    outline: none;
 }
 
 #result {
