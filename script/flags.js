@@ -26,3 +26,12 @@ toCurrency.addEventListener('change', function() {
     const selectedCurrency = toCurrency.value;
     toFlag.src = `https://flagcdn.com/w20/${countryFlags[selectedCurrency].toLowerCase()}.png`;
 });
+
+function updateFlags() {
+    const fromSelectedCurrency = fromCurrency.value;
+    const toSelectedCurrency = toCurrency.value;
+
+    fromFlag.src = `https://flagcdn.com/w20/${countryFlags[fromSelectedCurrency].toLowerCase()}.png`;
+    toFlag.src = `https://flagcdn.com/w20/${countryFlags[toSelectedCurrency].toLowerCase()}.png`;
+}
+
