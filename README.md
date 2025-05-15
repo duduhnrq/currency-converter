@@ -20,7 +20,7 @@ A minimalist and efficient **currency conversion web application**, developed wi
 
 ## 🖥️ Live Demo
 
-Experience the app: [To-Do List](https://duduhnrq.github.io/currency-converter/)
+Experience the app: [Currency-Converter](https://duduhnrq.github.io/currency-converter/)
 
 ## 💡 How to Use
 
